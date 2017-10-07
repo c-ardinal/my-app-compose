@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  proxy:
+    image: kdelfour/lychee-docker
+    container_name: lychee
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs:ro
+    restart: always
+    environment:
+    - VIRTUAL_HOST=lychee.cardinal.dev
+    - VIRTUAL_PORT=80
+
+networks:
+  default:
+    external:
+      name: shared
