@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  dnsmasq:
+    restart: always
+    image: andyshinn/dnsmasq
+    container_name: dnsmasq
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+    extra_hosts:
+      - "gitlab.cardinal.dev:192.168.0.70"
+      - "lychee.cardinal.dev:192.168.0.70"
+    cap_add:
+      - NET_ADMIN
