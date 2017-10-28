@@ -1,0 +1,15 @@
+# General
+.DS_Store
+
+# Chevereto
+chevereto/chevereto
+chevereto/mysql
+
+# Common
+
+# Dnsmasq
+
+# Gitlab
+*.tar
+
+# Lychee
