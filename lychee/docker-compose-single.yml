@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  lychee:
+    image: kdelfour/lychee-docker:latest
+    container_name: lychee
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs:ro
+    ports:
+      - 25252:80
