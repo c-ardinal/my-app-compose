@@ -3,7 +3,6 @@ MAINTAINER "c-ardinal <0rdinal.inf0tec.e1ectr0nics@gmail.com>"
 
 ENV CHEVERETO_APACHE_RUN_USER www-data
 ENV CHEVERETO_VERSION 1.0.8
-#ENV CHEVERETO_MAX_UPLOAD_SIZE 50M
 
 # DB connection environment variables
 ENV CHEVERETO_DB_HOST db
@@ -44,6 +43,7 @@ RUN curl -O https://codeload.github.com/Chevereto/Chevereto-Free/tar.gz/${CHEVER
     && tar zxvf ${CHEVERETO_VERSION} --strip 1 \
     && rm -f ${CHEVERETO_VERSION}
 
+# Copy setting.php and php.ini
 COPY settings.php app/settings.php
 COPY php.ini /usr/local/etc/php/php.ini
 
