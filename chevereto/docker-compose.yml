@@ -15,7 +15,7 @@ services:
   chevereto:
     depends_on:
       - db
-    image: c-ardinal/chevereto
+    image: cardina1/chevereto-docker
     restart: always
     environment:
       CHEVERETO_DB_HOST: db

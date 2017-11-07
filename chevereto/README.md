@@ -3,9 +3,7 @@
 ## How to run
 ```
 git clone https://github.com/c-ardinal/my-app-compose.git
-cd my-app-compose/Chevereto
-docker build .
-docker tag ${BUILD_IMAGE} c-ardinal/chevereto
+cd my-app-compose/chevereto
 docker-compose up -d
 ```
 ***
